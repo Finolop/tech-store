@@ -1,0 +1,191 @@
+/* ===== Страница истории заказов ===== */
+
+.orders-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 8px 48px;
+}
+
+.orders-empty {
+  padding: 60px 20px;
+}
+
+.orders-empty-cta {
+  margin-top: 12px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.order-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.order-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.order-label,
+.order-date {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.order-date {
+  margin-left: 8px;
+}
+
+.order-id {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.order-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.order-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.order-status[data-status='PAID'],
+.order-status[data-status='DELIVERED'] {
+  color: var(--success);
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 15%, transparent);
+}
+
+.order-status[data-status='CANCELLED'] {
+  color: var(--error);
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 15%, transparent);
+}
+
+.order-status[data-status='SHIPPED'] {
+  color: var(--info);
+  border-color: var(--info);
+  background: color-mix(in srgb, var(--info) 15%, transparent);
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+}
+
+.order-item-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.order-item-ph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--input);
+  border-radius: 8px;
+  color: var(--text-muted);
+}
+
+.order-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-item-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-item-qty {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.order-item-sum {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.order-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.order-delivery {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.order-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.order-total {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.order-cancel-btn {
+  min-height: 34px;
+  padding: 0 14px;
+  font-size: 13px;
+  color: var(--error);
+  box-shadow: inset 0 0 0 1.5px var(--error);
+}
+
+.order-cancel-btn:hover {
+  background: color-mix(in srgb, var(--error) 12%, transparent);
+}

@@ -1,0 +1,507 @@
+{
+  "users": [
+    {
+      "id": "user-demo-1",
+      "firstName": "Алексей",
+      "lastName": "Морозов",
+      "login": "alexey",
+      "email": "demo@arcshop.com",
+      "phone": "+79990001122",
+      "password": "$2b$10$9skkUe8wzYO83MhS1xHa8.f8uwp9EpBhlK/U1AqH8CkkNw281pOiu",
+      "role": "CUSTOMER",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z",
+      "nickname": "alexey",
+      "avatarUrl": null
+    },
+    {
+      "id": "user-admin-1",
+      "firstName": "Администратор",
+      "lastName": "ARCSHOP",
+      "login": "admin",
+      "email": "admin@arcshop.com",
+      "phone": "+79998887766",
+      "password": "$2b$10$VfmAu1P/hbAqu8ipBAFC4uZrJ5acZO3nT6lT4QchKeUkLJhtkjvoG",
+      "role": "ADMIN",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z",
+      "nickname": "admin",
+      "avatarUrl": null
+    }
+  ],
+  "refreshTokens": [
+    {
+      "id": "rt-6cui95jj",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLWRlbW8tMSIsImlhdCI6MTc5MjQ3NzkyNCwiZXhwIjoxNzk1MDY5OTI0fQ.RbepqUssZLGgvXjl9O8M6pfVwE0uBTuuQSB7t_720W8",
+      "userId": "user-demo-1",
+      "expiresAt": "2026-11-19T06:32:04.432Z",
+      "createdAt": "2026-10-20T06:32:04.432Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-smartphones",
+      "name": "Смартфоны",
+      "slug": "smartphones",
+      "icon": "smartphone",
+      "order": 1,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "cat-laptops",
+      "name": "Ноутбуки",
+      "slug": "laptops",
+      "icon": "laptop",
+      "order": 2,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "cat-peripherals",
+      "name": "Периферия",
+      "slug": "peripherals",
+      "icon": "headphones",
+      "order": 3,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "cat-accessories",
+      "name": "Аксессуары",
+      "slug": "accessories",
+      "icon": "bag",
+      "order": 4,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "cat-software",
+      "name": "Драйверы & Софт",
+      "slug": "software",
+      "icon": "book",
+      "order": 5,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    }
+  ],
+  "banners": [
+    {
+      "id": "banner-1",
+      "title": "Весенняя распродажа: скидки на ультрабуки и смартфоны до 25%",
+      "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+      "link": "/laptops",
+      "isActive": true,
+      "order": 1,
+      "createdAt": "2026-10-20T06:31:20.498Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-arc-phone-x",
+      "title": "Arc Phone X",
+      "name": "Arc Phone X",
+      "slug": "arc-phone-x",
+      "brand": "Arc",
+      "badge": "hit",
+      "colors": [
+        "#6c63ff",
+        "#2ec4ff"
+      ],
+      "description": {
+        "ru": "Флагман с ярким 120 Гц AMOLED-экраном, мощной камерой 50 Мп с оптической стабилизацией и быстрой зарядкой 67 Вт на весь день.",
+        "en": "Flagship with vivid 120Hz AMOLED display, powerful 50MP OIS camera, and 67W fast charging for all-day battery life."
+      },
+      "price": 59990,
+      "oldPrice": 69990,
+      "stock": 14,
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "chip": {
+          "ru": "Arc A17 Bionic",
+          "en": "Arc A17 Bionic"
+        },
+        "screen": 6.7,
+        "refresh": 120,
+        "ram": 12,
+        "storage": 256,
+        "camera": 50,
+        "battery": 5000,
+        "charging": 67,
+        "weight": 192,
+        "nfc": true,
+        "warranty": 12
+      },
+      "isFeatured": true,
+      "categoryId": "cat-smartphones",
+      "category": "smartphones",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-nova-s5",
+      "title": "Nova S5",
+      "name": "Nova S5",
+      "slug": "nova-s5",
+      "brand": "Nova",
+      "badge": "new",
+      "colors": [
+        "#ff6b9a",
+        "#ffb86b"
+      ],
+      "description": {
+        "ru": "Тонкий смартфон с рекордной быстрой зарядкой 80 Вт, 64 Мп камерой и ёмким аккумулятором на 5200 мА·ч.",
+        "en": "Slim smartphone with ultra-fast 80W charging, 64MP sensor and a large 5200 mAh battery."
+      },
+      "price": 44990,
+      "oldPrice": null,
+      "stock": 8,
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "chip": {
+          "ru": "Nova N8 Pro",
+          "en": "Nova N8 Pro"
+        },
+        "screen": 6.5,
+        "refresh": 120,
+        "ram": 8,
+        "storage": 128,
+        "camera": 64,
+        "battery": 5200,
+        "charging": 80,
+        "weight": 201,
+        "nfc": true,
+        "warranty": 12
+      },
+      "isFeatured": false,
+      "categoryId": "cat-smartphones",
+      "category": "smartphones",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-arc-book-15-pro",
+      "title": "Arc Book 15 Pro",
+      "name": "Arc Book 15 Pro",
+      "slug": "arc-book-15-pro",
+      "brand": "Arc",
+      "badge": "hit",
+      "colors": [
+        "#6c63ff",
+        "#a78bfa"
+      ],
+      "description": {
+        "ru": "Мощный и бесшумный ультрабук для работы и творчества с 15.6\" Retina экраном 120 Гц и автономностью до 16 часов.",
+        "en": "Powerful, silent ultrabook for creative work with 15.6\" 120Hz Retina screen and up to 16h battery life."
+      },
+      "price": 89990,
+      "oldPrice": null,
+      "stock": 6,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "cpu": {
+          "ru": "Arc M2 Pro",
+          "en": "Arc M2 Pro"
+        },
+        "cores": 10,
+        "gpu": {
+          "ru": "Встроенная 16 ядер",
+          "en": "Integrated 16-core"
+        },
+        "ram": 16,
+        "storage": 512,
+        "screen": 15.6,
+        "refresh": 120,
+        "battery": 16,
+        "weight": 1.7,
+        "warranty": 12
+      },
+      "isFeatured": true,
+      "categoryId": "cat-laptops",
+      "category": "laptops",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-arc-pulse-headset",
+      "title": "Arc Pulse Headset",
+      "name": "Arc Pulse Headset",
+      "slug": "arc-pulse-headset",
+      "brand": "Arc",
+      "badge": "hit",
+      "colors": [
+        "#6c63ff",
+        "#22d3ee"
+      ],
+      "description": {
+        "ru": "Беспроводная игровая гарнитура: 40 часов звука высокой четкости, RGB-подсветка и ультранизкая задержка 20 мс.",
+        "en": "Wireless gaming headset: 40 hours of hi-fi audio, RGB lighting, and ultra-low 20ms latency."
+      },
+      "price": 7990,
+      "oldPrice": null,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "type": {
+          "ru": "Игровая гарнитура",
+          "en": "Gaming headset"
+        },
+        "connection": {
+          "ru": "2.4 ГГц / Bluetooth",
+          "en": "2.4 GHz / Bluetooth"
+        },
+        "latency": 20,
+        "battery": 40,
+        "weight": 290,
+        "rgb": true,
+        "warranty": 12
+      },
+      "isFeatured": false,
+      "categoryId": "cat-peripherals",
+      "category": "peripherals",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-nova-strike-mouse",
+      "title": "Nova Strike Mouse",
+      "name": "Nova Strike Mouse",
+      "slug": "nova-strike-mouse",
+      "brand": "Nova",
+      "badge": "new",
+      "colors": [
+        "#ff6b9a",
+        "#8b5cf6"
+      ],
+      "description": {
+        "ru": "Сверхлёгкая беспроводная мышь весом 58 граммов с оптическим сенсором 26000 DPI и откликом 1 мс.",
+        "en": "Ultra-light 58g wireless mouse with 26,000 DPI optical sensor and 1ms response time."
+      },
+      "price": 5490,
+      "oldPrice": null,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "type": {
+          "ru": "Мышь",
+          "en": "Mouse"
+        },
+        "connection": {
+          "ru": "2.4 ГГц",
+          "en": "2.4 GHz"
+        },
+        "latency": 1,
+        "battery": 90,
+        "weight": 58,
+        "rgb": true,
+        "warranty": 12
+      },
+      "isFeatured": false,
+      "categoryId": "cat-peripherals",
+      "category": "peripherals",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-arc-charge-65",
+      "title": "Arc Charge 65W",
+      "name": "Arc Charge 65W",
+      "slug": "arc-charge-65w",
+      "brand": "Arc",
+      "badge": "hit",
+      "colors": [
+        "#6c63ff",
+        "#facc15"
+      ],
+      "description": {
+        "ru": "Компактное GaN зарядное устройство мощностью 65 Вт с 3 портами для одновременного питания ноутбука, телефона и наушников.",
+        "en": "Compact 65W GaN charger with 3 ports for simultaneous charging of laptop, phone, and accessories."
+      },
+      "price": 2490,
+      "oldPrice": null,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80"
+      ],
+      "specs": {
+        "type": {
+          "ru": "Зарядное устройство",
+          "en": "Charger"
+        },
+        "power": 65,
+        "ports": 3,
+        "cable": 1.5,
+        "weight": 140,
+        "warranty": 12
+      },
+      "isFeatured": false,
+      "categoryId": "cat-accessories",
+      "category": "accessories",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    },
+    {
+      "id": "prod-arc-driver-suite",
+      "title": "Arc Driver Suite Pro",
+      "name": "Arc Driver Suite Pro",
+      "slug": "arc-driver-suite-pro",
+      "brand": "Arc",
+      "badge": "hit",
+      "colors": [
+        "#6c63ff",
+        "#06b6d4"
+      ],
+      "description": {
+        "ru": "Фирменный пакет утилит: автоматическое обновление драйверов, тонкая настройка производительности и откат системы в один клик.",
+        "en": "Arc software suite: automatic driver updates, hardware performance tuning, and 1-click restore."
+      },
+      "price": 1290,
+      "oldPrice": null,
+      "stock": 999,
+      "image": "",
+      "images": [],
+      "specs": {
+        "platforms": {
+          "ru": "Windows / Linux",
+          "en": "Windows / Linux"
+        },
+        "version": {
+          "ru": "4.2 LTS",
+          "en": "4.2 LTS"
+        },
+        "devices": 3,
+        "support": 12,
+        "size": 180
+      },
+      "isFeatured": false,
+      "categoryId": "cat-software",
+      "category": "software",
+      "createdAt": "2026-10-20T06:31:20.498Z",
+      "updatedAt": "2026-10-20T06:31:20.498Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-demo-1",
+      "productId": "prod-arc-phone-x",
+      "userId": "user-demo-1",
+      "authorName": "Алексей М.",
+      "rating": 5,
+      "text": "Экран очень плавный, заряда стабильно хватает на полтора дня активного использования. Камера в темноте приятно удивила!",
+      "createdAt": "2026-10-18T06:31:20.676Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-demo-1",
+      "productId": "prod-arc-phone-x",
+      "userId": "user-demo-1",
+      "authorName": "Сергей Н.",
+      "text": "Есть ли в комплекте зарядный блок питания?",
+      "createdAt": "2026-10-19T06:31:20.676Z"
+    }
+  ],
+  "answers": [
+    {
+      "id": "ans-demo-1",
+      "questionId": "q-demo-1",
+      "userId": "user-admin-1",
+      "authorName": "Магазин ARCSHOP",
+      "text": "Да, в комплекте идёт фирменный блок питания GaN на 67 Вт и кабель USB Type-C.",
+      "createdAt": "2026-10-19T18:31:20.676Z"
+    }
+  ],
+  "cartItems": [],
+  "favorites": [],
+  "orders": [
+    {
+      "id": "order-demo-init",
+      "userId": "user-demo-1",
+      "status": "PAID",
+      "totalAmount": 59990,
+      "deliveryAddress": "г. Москва, ул. Ленина, д. 10, кв. 42",
+      "contactPhone": "+79990001122",
+      "comment": "Доставка до двери",
+      "createdAt": "2026-10-17T06:31:20.675Z",
+      "updatedAt": "2026-10-17T06:31:20.676Z"
+    }
+  ],
+  "orderItems": [
+    {
+      "id": "order-item-demo-1",
+      "orderId": "order-demo-init",
+      "productId": "prod-arc-phone-x",
+      "price": 59990,
+      "quantity": 1
+    }
+  ],
+  "promoCodes": [
+    {
+      "id": "promo-1",
+      "code": "ARC2026",
+      "discountPercent": 10,
+      "minOrderAmount": 5000,
+      "description": "Скидка 10% на всю технику ARCSHOP при заказе от 5 000 ₽",
+      "isActive": true
+    },
+    {
+      "id": "promo-2",
+      "code": "WELCOME",
+      "discountPercent": 5,
+      "minOrderAmount": 1000,
+      "description": "Приветственная скидка 5% на первый заказ",
+      "isActive": true
+    },
+    {
+      "id": "promo-3",
+      "code": "PRODEV",
+      "discountPercent": 15,
+      "minOrderAmount": 40000,
+      "description": "Скидка 15% для разработчиков на ноутбуки и флагманы",
+      "isActive": true
+    }
+  ],
+  "chatMessages": [
+    {
+      "id": "msg-ql8h59x",
+      "sessionId": "guest",
+      "from": "me",
+      "text": "в",
+      "createdAt": "2026-10-27T17:08:45.300Z"
+    },
+    {
+      "id": "msg-458harw",
+      "sessionId": "guest",
+      "from": "support",
+      "text": "Консультант ARCSHOP на связи! С радостью помогу подобрать смартфон или ультрабук, расскажу про промокоды (например, ARC2026), условия доставки и гарантии ArcCare+.",
+      "createdAt": "2026-10-27T17:08:45.400Z"
+    },
+    {
+      "id": "msg-paelkx1",
+      "sessionId": "guest",
+      "from": "me",
+      "text": "фыв",
+      "createdAt": "2026-10-27T17:08:48.257Z"
+    },
+    {
+      "id": "msg-zyefxce",
+      "sessionId": "guest",
+      "from": "support",
+      "text": "Консультант ARCSHOP на связи! С радостью помогу подобрать смартфон или ультрабук, расскажу про промокоды (например, ARC2026), условия доставки и гарантии ArcCare+.",
+      "createdAt": "2026-10-27T17:08:48.357Z"
+    }
+  ],
+  "tradeInRequests": [],
+  "b2bQuotes": []
+}

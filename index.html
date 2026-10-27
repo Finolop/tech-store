@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARCSHOP - Tech Store & API</title>
+    <meta name="description" content="Интернет-магазин электроники и техники ARCSHOP с каталогом, умным сравнением, отзывами, корзиной и полноценным набором REST API эндпоинтов." />
+    <meta property="og:title" content="ARCSHOP - Tech Store & API" />
+    <meta property="og:description" content="Интернет-магазин электроники и техники ARCSHOP с каталогом, умным сравнением, отзывами, корзиной и полноценным набором REST API эндпоинтов." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('arcshop:theme');
+          if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+:root {
+  --accent: #4340b8;
+  --accent-dark: #26215c;
+  --accent-soft: #b9b6ff;
+  --on-accent: #ffffff;
+
+  --bg: #f5f5f7;
+  --text: #14142b;
+  --text-muted: #6a6a80;
+  --surface: #e9e9ef;
+  --input: #e9e9ef;
+  --input-text: #000000;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --border: #000000;
+  --line: #e3e3ea;
+  --link: #4340b8;
+  --error: #c62828;
+  --danger-bg: #c62828;
+  --badge-bg: #e5484d;
+  --fav-active: #e5384f;
+  --info: #0284c7;
+  --success: #2e7d32;
+  --focus: #4340b8;
+  --backdrop-bg: rgb(8 6 28 / 55%);
+  --shadow: 0 8px 28px rgb(20 20 43 / 12%);
+  --shadow-card: 0 1px 2px rgb(20 20 43 / 6%), 0 6px 18px rgb(20 20 43 / 6%);
+  --sale: #c0392b;
+  --success-solid: #2e7d32;
+  --star: #e0a100;
+
+  /* градиент кнопок и «нажатое» состояние */
+  --btn-bg: #4340b8;
+  --btn-fg: #e6e6f8;
+  --btn-hover: brightness(1.15);
+  --press-bg: linear-gradient(90deg, #1b1745, #0f0c2e);
+  --press-fg: #ffffff;
+  --press-solid: #1b1745;
+  --round-bg: #4340b8;
+
+  /* боковая панель */
+  --side-1: #4340b8;
+  --side-2: #342f94;
+  --side-3: #26215c;
+  --side-4: #201c52;
+
+  /* диагональные полосы */
+  --deco-light: #d9d9d9;
+  --deco-dark-from: #3d3a8c;
+  --deco-dark-to: #28235f;
+
+  /* радиусы */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  color-scheme: light;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* меню в боковой панели */
+  --nav-bg: #e8e8ee;
+  --nav-fg: #2a2a40;
+  --nav-hover: rgb(20 20 43 / 6%);
+  --nav-active-bg: #ffffff;
+  --nav-active-fg: #4340b8;
+  --nav-active-shadow: 0 1px 3px rgb(20 20 43 / 15%);
+}
+
+/* Тёмная тема «Полночный индиго»: включается вручную... */
+:root[data-theme='dark'] {
+  --bg: #0b0b17;
+  --text: #ecebfa;
+  --text-muted: #9b9abd;
+  --surface: #17172c;
+  --input: #20203c;
+  --input-text: #ecebfa;
+  --panel: #12122a;
+  --card: #15152b;
+  --border: #2c2c52;
+  --line: #26264a;
+  --link: #a19eff;
+  --error: #ff8f9d;
+  --danger-bg: #c62828;
+  --badge-bg: #e5484d;
+  --fav-active: #ff5c72;
+  --info: #38bdf8;
+  --success: #6fe0a0;
+  --focus: #a19eff;
+  --backdrop-bg: rgb(4 3 16 / 70%);
+  --shadow: 0 24px 70px rgb(0 0 0 / 55%);
+  --shadow-card: none;
+  --sale: #ff8f9d;
+  --success-solid: #2f9e6b;
+  --star: #ffc233;
+
+  --btn-bg: #7a77f0;
+  --btn-fg: #0b0b17;
+  --btn-hover: brightness(1.12);
+  --press-bg: linear-gradient(90deg, #c7c5ff, #a19eff);
+  --press-fg: #14123a;
+  --press-solid: #b3b0ff;
+  --round-bg: #7a77f0;
+
+  --side-1: #35318f;
+  --side-2: #29256f;
+  --side-3: #1a1750;
+  --side-4: #120f3a;
+
+  --deco-light: #3a3a66;
+  --deco-dark-from: #2d2a6a;
+  --deco-dark-to: #15123b;
+  color-scheme: dark;
+  --nav-bg: #1c1c2b;
+  --nav-fg: #d4d4e4;
+  --nav-hover: rgb(255 255 255 / 7%);
+  --nav-active-bg: #4a46c8;
+  --nav-active-fg: #ffffff;
+  --nav-active-shadow: none;
+}
+
+/* ...или системной настройкой, если ручной выбор не сделан */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0b0b17;
+    --text: #ecebfa;
+    --text-muted: #9b9abd;
+    --surface: #17172c;
+    --input: #20203c;
+    --input-text: #ecebfa;
+    --panel: #12122a;
+    --card: #15152b;
+    --border: #2c2c52;
+    --line: #26264a;
+    --link: #a19eff;
+    --error: #ff8f9d;
+    --danger-bg: #c62828;
+    --badge-bg: #e5484d;
+    --fav-active: #ff5c72;
+    --info: #38bdf8;
+    --success: #6fe0a0;
+    --focus: #a19eff;
+    --backdrop-bg: rgb(4 3 16 / 70%);
+    --shadow: 0 24px 70px rgb(0 0 0 / 55%);
+    --shadow-card: none;
+    --sale: #ff8f9d;
+    --success-solid: #2f9e6b;
+    --star: #ffc233;
+
+    --btn-bg: #7a77f0;
+    --btn-fg: #0b0b17;
+    --btn-hover: brightness(1.12);
+    --press-bg: linear-gradient(90deg, #c7c5ff, #a19eff);
+    --press-fg: #14123a;
+    --press-solid: #b3b0ff;
+    --round-bg: #7a77f0;
+
+    --side-1: #35318f;
+    --side-2: #29256f;
+    --side-3: #1a1750;
+    --side-4: #120f3a;
+
+    --deco-light: #3a3a66;
+    --deco-dark-from: #2d2a6a;
+    --deco-dark-to: #15123b;
+    color-scheme: dark;
+    --nav-bg: #1c1c2b;
+    --nav-fg: #d4d4e4;
+    --nav-hover: rgb(255 255 255 / 7%);
+    --nav-active-bg: #4a46c8;
+    --nav-active-fg: #ffffff;
+    --nav-active-shadow: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Диагональные полосы в углу */
+.deco {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: min(52vw, 1000px);
+  height: auto;
+  aspect-ratio: 960 / 750;
+  pointer-events: none;
+
+  & .deco-accent {
+    fill: var(--accent);
+  }
+
+  & .deco-light {
+    fill: var(--deco-light);
+  }
+
+  & .deco-dark {
+    fill: url('#deco-gradient');
+  }
+}

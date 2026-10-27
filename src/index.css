@@ -1,0 +1,7 @@
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "./styles/base.css";
+@import "./styles/app.css";
+@import "./styles/shop.css";
+@import "./styles/checkout.css";
+@import "./styles/orders.css";
