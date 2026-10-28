@@ -81,6 +81,16 @@ export function Shell({ children }: { children?: ReactNode }) {
               <span>{t('nav.orders')}</span>
             </NavLink>
           )}
+          {user?.role === 'ADMIN' && (
+            <NavLink
+              to="/admin"
+              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+              onClick={() => setMenuOpen(false)}
+            >
+              <Icon name="gear" />
+              <span>Админ-панель</span>
+            </NavLink>
+          )}
         </nav>
 
         {user ? (

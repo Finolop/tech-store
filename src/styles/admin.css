@@ -1,0 +1,425 @@
+/* ===== Стили Админ-панели ARCSHOP (Стилистика бутика Arc) ===== */
+
+.admin-page {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 64px 0;
+}
+
+/* Header & Controls matching .shead */
+.admin-shead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-shead-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-shead-title h1 {
+  margin: 0;
+  font-size: clamp(24px, 2.5vw, 32px);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.admin-role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.admin-shead-sub {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.admin-shead-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navigation Tabs matching site tabs */
+.admin-nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 6px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+}
+
+.admin-tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.admin-tab-item:hover {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.admin-tab-item.active {
+  background: var(--card);
+  color: var(--accent);
+  box-shadow: var(--shadow-card);
+}
+
+/* KPI Metrics Grid */
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-kpi-card {
+  padding: 22px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.admin-kpi-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-kpi-val {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.admin-kpi-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--success);
+  font-weight: 600;
+}
+
+/* Low Stock Alert Box */
+.admin-alert-box {
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--sale) 8%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--sale) 30%, transparent);
+}
+
+.admin-alert-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--sale);
+  margin-bottom: 14px;
+}
+
+.admin-alert-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-stock-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--card);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+}
+
+.admin-stock-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--sale) 15%, transparent);
+  color: var(--sale);
+}
+
+/* Order Filters Pills */
+.admin-filter-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.admin-filter-pill {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.admin-filter-pill:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.admin-filter-pill.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Full Width Modern Tables */
+.admin-table-container {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 28px;
+}
+
+.admin-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-table-main {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-table-main th {
+  padding: 16px 20px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.admin-table-main td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.admin-table-main tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table-main tr:hover td {
+  background: color-mix(in srgb, var(--accent) 3%, var(--card));
+}
+
+/* Russian Status Pills matching site status tags */
+.order-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.order-status-pill.status-PENDING {
+  color: var(--star);
+  background: color-mix(in srgb, var(--star) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--star) 30%, transparent);
+}
+
+.order-status-pill.status-PAID {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+}
+
+.order-status-pill.status-SHIPPED {
+  color: var(--info);
+  background: color-mix(in srgb, var(--info) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--info) 30%, transparent);
+}
+
+.order-status-pill.status-DELIVERED {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--success) 40%, transparent);
+}
+
+.order-status-pill.status-CANCELLED {
+  color: var(--error);
+  background: color-mix(in srgb, var(--error) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--error) 30%, transparent);
+}
+
+/* Status Selector */
+.admin-select-status {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--input);
+  color: var(--input-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-select-status:focus {
+  border-color: var(--accent);
+}
+
+/* Action Buttons */
+.admin-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.admin-action-btn.btn-solid {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.admin-action-btn.btn-solid:hover {
+  filter: var(--btn-hover);
+}
+
+.admin-action-btn.btn-outlined {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.admin-action-btn.btn-outlined:hover {
+  background: var(--surface);
+  border-color: var(--text-muted);
+}
+
+.admin-action-btn.btn-delete {
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+  color: var(--error);
+  border: 1px solid color-mix(in srgb, var(--error) 25%, transparent);
+}
+
+.admin-action-btn.btn-delete:hover {
+  background: var(--error);
+  color: #ffffff;
+}
+
+/* Add Product Form */
+.admin-create-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.admin-form-row-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.admin-input-group input,
+.admin-input-group select {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--input);
+  color: var(--input-text);
+  font-size: 14px;
+}
+
+/* Access Denied */
+.admin-access-denied {
+  text-align: center;
+  padding: 64px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  margin-top: 20px;
+}
+
+.admin-access-denied h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 16px 0 8px;
+}
+
+.admin-access-denied p {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin: 0 auto 24px;
+}
