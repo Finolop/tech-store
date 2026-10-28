@@ -141,7 +141,7 @@
       "categoryId": "cat-smartphones",
       "category": "smartphones",
       "createdAt": "2026-10-20T06:31:20.498Z",
-      "updatedAt": "2026-10-27T19:58:04.774Z"
+      "updatedAt": "2026-10-28T11:06:32.152Z"
     },
     {
       "id": "prod-nova-s5",
@@ -185,7 +185,7 @@
       "categoryId": "cat-smartphones",
       "category": "smartphones",
       "createdAt": "2026-10-20T06:31:20.498Z",
-      "updatedAt": "2026-10-27T19:56:16.790Z"
+      "updatedAt": "2026-10-28T11:06:32.152Z"
     },
     {
       "id": "prod-arc-book-15-pro",
@@ -429,7 +429,14 @@
       "createdAt": "2026-10-19T18:31:20.676Z"
     }
   ],
-  "cartItems": [],
+  "cartItems": [
+    {
+      "id": "cart-g0ua0rho",
+      "userId": "user-admin-1",
+      "productId": "prod-arc-book-15-pro",
+      "quantity": 1
+    }
+  ],
   "favorites": [],
   "orders": [
     {
@@ -442,6 +449,24 @@
       "comment": "Доставка до двери",
       "createdAt": "2026-10-17T06:31:20.675Z",
       "updatedAt": "2026-10-17T06:31:20.676Z"
+    },
+    {
+      "id": "ord-MVS0EI54",
+      "userId": "user-admin-1",
+      "status": "CANCELLED",
+      "subtotalAmount": 104980,
+      "discountAmount": 0,
+      "promoCode": null,
+      "warrantyCare": false,
+      "warrantyPrice": 0,
+      "paymentMethod": "CARD",
+      "totalAmount": 104980,
+      "recipientName": "Администратор ARCSHOP",
+      "deliveryAddress": "ывы",
+      "contactPhone": "+79998887766",
+      "comment": "1",
+      "createdAt": "2026-10-28T11:06:32.152Z",
+      "updatedAt": "2026-10-28T11:06:46.434Z"
     }
   ],
   "orderItems": [
@@ -450,6 +475,20 @@
       "orderId": "order-demo-init",
       "productId": "prod-arc-phone-x",
       "price": 59990,
+      "quantity": 1
+    },
+    {
+      "id": "e05ceb8b-135d-4740-a59c-2b23c5a1f8db",
+      "orderId": "ord-MVS0EI54",
+      "productId": "prod-arc-phone-x",
+      "price": 59990,
+      "quantity": 1
+    },
+    {
+      "id": "6cab6960-58ae-4289-ae5e-d86be259cda0",
+      "orderId": "ord-MVS0EI54",
+      "productId": "prod-nova-s5",
+      "price": 44990,
       "quantity": 1
     }
   ],
