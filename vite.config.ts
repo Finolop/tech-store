@@ -7,8 +7,9 @@ import { defineConfig } from 'vite';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(() => {
+  const isGhp = process.env.GITHUB_PAGES === 'true';
   return {
-    base: '/tech-store/',
+    base: isGhp ? '/tech-store/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
