@@ -3,7 +3,13 @@ import type { User } from './auth';
 import type { BannerItem } from '../presenter/catalog-context';
 import type { ApiResult } from './api';
 
-const CHARGER_IMG = 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80';
+const BASE = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.BASE_URL)
+  ? (import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`)
+  : '/tech-store/';
+
+export const getImg = (name: string) => `${BASE}images/${name}`;
+
+const CHARGER_IMG = getImg('arc-charge-65.svg');
 
 export interface MockOrderItem {
   id: string;
@@ -44,7 +50,7 @@ export const SEED_BANNERS: BannerItem[] = [
   {
     id: 'banner-1',
     title: 'Весенняя распродажа: скидки на ультрабуки и смартфоны до 25%',
-    imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: getImg('banner-sale.svg'),
     link: '/laptops',
   },
 ];
@@ -68,8 +74,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 5,
     reviewCount: 1,
     questionCount: 0,
-    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'],
+    image: getImg('arc-phone-x.svg'),
+    images: [getImg('arc-phone-x.svg')],
     specs: {
       chip: { ru: 'Arc A17 Bionic', en: 'Arc A17 Bionic' },
       screen: 6.7,
@@ -103,8 +109,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 0,
     reviewCount: 0,
     questionCount: 0,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'],
+    image: getImg('nova-s5.svg'),
+    images: [getImg('nova-s5.svg')],
     specs: {
       chip: { ru: 'Nova N8 Pro', en: 'Nova N8 Pro' },
       screen: 6.5,
@@ -138,8 +144,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 0,
     reviewCount: 0,
     questionCount: 0,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80'],
+    image: getImg('arc-book-15-pro.svg'),
+    images: [getImg('arc-book-15-pro.svg')],
     specs: {
       cpu: { ru: 'Arc M2 Pro', en: 'Arc M2 Pro' },
       cores: 10,
@@ -172,8 +178,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 0,
     reviewCount: 0,
     questionCount: 0,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'],
+    image: getImg('arc-pulse-headset.svg'),
+    images: [getImg('arc-pulse-headset.svg')],
     specs: {
       type: { ru: 'Игровая гарнитура', en: 'Gaming headset' },
       connection: { ru: '2.4 ГГц / Bluetooth', en: '2.4 GHz / Bluetooth' },
@@ -203,8 +209,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 0,
     reviewCount: 0,
     questionCount: 0,
-    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
-    images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80'],
+    image: getImg('nova-strike-mouse.svg'),
+    images: [getImg('nova-strike-mouse.svg')],
     specs: {
       type: { ru: 'Мышь', en: 'Mouse' },
       connection: { ru: '2.4 ГГц', en: '2.4 GHz' },
@@ -264,8 +270,8 @@ export const SEED_PRODUCTS: Product[] = [
     rating: 0,
     reviewCount: 0,
     questionCount: 0,
-    image: '',
-    images: [],
+    image: getImg('arc-driver-suite.svg'),
+    images: [getImg('arc-driver-suite.svg')],
     specs: {
       platforms: { ru: 'Windows / Linux', en: 'Windows / Linux' },
       version: { ru: '4.2 LTS', en: '4.2 LTS' },
@@ -302,7 +308,7 @@ const DEMO_ADMIN: User = {
 
 function getStorage<T>(key: string, defaultVal: T): T {
   try {
-    const raw = localStorage.getItem(`arcshop:ghp:${key}`);
+    const raw = localStorage.getItem(`arcshop:ghp:v3:${key}`);
     return raw ? JSON.parse(raw) : defaultVal;
   } catch {
     return defaultVal;
@@ -311,7 +317,7 @@ function getStorage<T>(key: string, defaultVal: T): T {
 
 function setStorage<T>(key: string, val: T): void {
   try {
-    localStorage.setItem(`arcshop:ghp:${key}`, JSON.stringify(val));
+    localStorage.setItem(`arcshop:ghp:v3:${key}`, JSON.stringify(val));
   } catch {
     /* ignore */
   }

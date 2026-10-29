@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="laptopLid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="laptopDisplay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="laptopBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="codeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="lapGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Laptop Base Shadow -->
+  <ellipse cx="300" cy="510" rx="230" ry="25" fill="#000000" opacity="0.5" filter="url(#lapGlow)"/>
+
+  <!-- Screen Lid (Upright Display) -->
+  <rect x="110" y="90" width="380" height="260" rx="16" fill="url(#laptopLid)" stroke="#475569" stroke-width="2"/>
+  <rect x="122" y="102" width="356" height="236" rx="10" fill="url(#laptopDisplay)"/>
+
+  <!-- Display Content / Futuristic UI Lines -->
+  <circle cx="300" cy="210" r="70" fill="url(#codeGlow)" opacity="0.3" filter="url(#lapGlow)"/>
+  <path d="M 140 180 Q 220 120 300 170 T 460 140" fill="none" stroke="url(#codeGlow)" stroke-width="3" opacity="0.8"/>
+  <path d="M 140 220 Q 240 280 340 210 T 460 250" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.7"/>
+
+  <!-- Top Webcam & Sensor -->
+  <circle cx="300" cy="96" r="3" fill="#090d16"/>
+  <circle cx="300" cy="96" r="1" fill="#38bdf8"/>
+
+  <!-- Logo on screen -->
+  <text x="300" y="225" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="3" opacity="0.9">ARCSHOP</text>
+  <text x="300" y="245" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="1">M2 PRO • 120HZ LIQUID RETINA</text>
+
+  <!-- Hinge Bar -->
+  <rect x="230" y="344" width="140" height="8" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+
+  <!-- Bottom Chassis / Keyboard Base (Perspective) -->
+  <path d="M 60 480 L 110 350 L 490 350 L 540 480 Q 545 492 530 494 L 70 494 Q 55 492 60 480 Z" fill="url(#laptopBase)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Backlit Keyboard Island -->
+  <path d="M 140 435 L 160 365 L 440 365 L 460 435 Z" fill="#0b0f19" stroke="#475569" stroke-width="1"/>
+  <!-- Key rows indication -->
+  <line x1="165" y1="380" x2="435" y2="380" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+  <line x1="155" y1="398" x2="445" y2="398" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+  <line x1="145" y1="416" x2="455" y2="416" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+
+  <!-- Glass Trackpad -->
+  <rect x="245" y="445" width="110" height="38" rx="6" fill="#172033" stroke="#334155" stroke-width="1"/>
+  <!-- Front Lip Notch -->
+  <rect x="270" y="492" width="60" height="3" rx="1.5" fill="#64748b"/>
+</svg>

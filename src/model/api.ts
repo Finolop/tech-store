@@ -4,6 +4,11 @@ import { handleMockRequest } from './mock-store';
 export type ApiResult<T> = ({ ok: true } & T) | { ok: false; error: TranslationKey };
 
 async function request<T>(path: string, method: 'GET' | 'POST' | 'PATCH' | 'DELETE', body?: object): Promise<ApiResult<T>> {
+  // On GitHub Pages (static hosting with no backend), use mock store directly without sending failing network requests
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('github.io')) {
+    return handleMockRequest<T>(path, method, body);
+  }
+
   try {
     const fullPath = path.startsWith('/api') ? path : `/api/v1${path}`;
     const response = await fetch(fullPath, {

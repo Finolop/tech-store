@@ -198,8 +198,7 @@ interface DatabaseSchema {
 const DATA_DIR = path.resolve(process.cwd(), '.data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 
-const CHARGER_IMAGE_URL =
-  'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80';
+const CHARGER_IMAGE_URL = '/images/arc-charge-65.svg';
 
 function ensureDataDir() {
   if (!fs.existsSync(DATA_DIR)) {
@@ -254,7 +253,7 @@ function getInitialData(): DatabaseSchema {
     {
       id: 'banner-1',
       title: 'Весенняя распродажа: скидки на ультрабуки и смартфоны до 25%',
-      imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: '/images/banner-sale.svg',
       link: '/laptops',
       isActive: true,
       order: 1,
@@ -278,8 +277,8 @@ function getInitialData(): DatabaseSchema {
       price: 59990,
       oldPrice: 69990,
       stock: 14,
-      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
-      images: ['https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'],
+      image: '/images/arc-phone-x.svg',
+      images: ['/images/arc-phone-x.svg'],
       specs: {
         chip: { ru: 'Arc A17 Bionic', en: 'Arc A17 Bionic' },
         screen: 6.7,
@@ -314,8 +313,8 @@ function getInitialData(): DatabaseSchema {
       price: 44990,
       oldPrice: null,
       stock: 8,
-      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
-      images: ['https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'],
+      image: '/images/nova-s5.svg',
+      images: ['/images/nova-s5.svg'],
       specs: {
         chip: { ru: 'Nova N8 Pro', en: 'Nova N8 Pro' },
         screen: 6.5,
@@ -350,8 +349,8 @@ function getInitialData(): DatabaseSchema {
       price: 89990,
       oldPrice: null,
       stock: 6,
-      image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
-      images: ['https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80'],
+      image: '/images/arc-book-15-pro.svg',
+      images: ['/images/arc-book-15-pro.svg'],
       specs: {
         cpu: { ru: 'Arc M2 Pro', en: 'Arc M2 Pro' },
         cores: 10,
@@ -385,8 +384,8 @@ function getInitialData(): DatabaseSchema {
       price: 7990,
       oldPrice: null,
       stock: 20,
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-      images: ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'],
+      image: '/images/arc-pulse-headset.svg',
+      images: ['/images/arc-pulse-headset.svg'],
       specs: {
         type: { ru: 'Игровая гарнитура', en: 'Gaming headset' },
         connection: { ru: '2.4 ГГц / Bluetooth', en: '2.4 GHz / Bluetooth' },
@@ -417,8 +416,8 @@ function getInitialData(): DatabaseSchema {
       price: 5490,
       oldPrice: null,
       stock: 15,
-      image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
-      images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80'],
+      image: '/images/nova-strike-mouse.svg',
+      images: ['/images/nova-strike-mouse.svg'],
       specs: {
         type: { ru: 'Мышь', en: 'Mouse' },
         connection: { ru: '2.4 ГГц', en: '2.4 GHz' },
@@ -480,8 +479,8 @@ function getInitialData(): DatabaseSchema {
       price: 1290,
       oldPrice: null,
       stock: 999,
-      image: '',
-      images: [],
+      image: '/images/arc-driver-suite.svg',
+      images: ['/images/arc-driver-suite.svg'],
       specs: {
         platforms: { ru: 'Windows / Linux', en: 'Windows / Linux' },
         version: { ru: '4.2 LTS', en: '4.2 LTS' },

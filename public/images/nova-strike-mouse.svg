@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mouseBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a3042"/>
+      <stop offset="40%" stop-color="#181c28"/>
+      <stop offset="100%" stop-color="#0d0f17"/>
+    </linearGradient>
+    <linearGradient id="mouseRgb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b9a"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="mouseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Under-glow & Shadow -->
+  <ellipse cx="300" cy="500" rx="140" ry="24" fill="#000000" opacity="0.45" filter="url(#mouseGlow)"/>
+  <ellipse cx="300" cy="460" rx="90" ry="18" fill="url(#mouseRgb)" opacity="0.35" filter="url(#mouseGlow)"/>
+
+  <!-- Mouse Main Shell Outline -->
+  <!-- Ergonomic contoured body -->
+  <path d="M 230 140 C 270 130 330 130 370 140 C 410 200 420 350 390 440 C 360 480 240 480 210 440 C 180 350 190 200 230 140 Z" fill="url(#mouseBody)" stroke="#334155" stroke-width="2"/>
+
+  <!-- Left Button Clicker -->
+  <path d="M 232 142 C 260 135 290 134 294 134 L 294 280 C 255 285 210 260 200 210 Z" fill="#242938" stroke="#0f172a" stroke-width="1.5"/>
+
+  <!-- Right Button Clicker -->
+  <path d="M 368 142 C 340 135 310 134 306 134 L 306 280 C 345 285 390 260 400 210 Z" fill="#242938" stroke="#0f172a" stroke-width="1.5"/>
+
+  <!-- Center Scroll Wheel Well -->
+  <rect x="290" y="160" width="20" height="70" rx="10" fill="#090d16" stroke="#1e293b" stroke-width="2"/>
+  <!-- Scroll Wheel with Illuminated Rim -->
+  <rect x="294" y="170" width="12" height="46" rx="6" fill="#1e293b" stroke="url(#mouseRgb)" stroke-width="2" filter="url(#mouseGlow)"/>
+
+  <!-- DPI Button -->
+  <rect x="293" y="246" width="14" height="20" rx="4" fill="#334155" stroke="#475569" stroke-width="1"/>
+
+  <!-- RGB Rear Contour Diffuser Strip -->
+  <path d="M 235 440 Q 300 470 365 440" fill="none" stroke="url(#mouseRgb)" stroke-width="6" stroke-linecap="round" filter="url(#mouseGlow)"/>
+
+  <!-- Honeycomb Lightweight Pattern / Laser Etch Logo -->
+  <circle cx="300" cy="350" r="24" fill="#090d16" stroke="url(#mouseRgb)" stroke-width="1.5" opacity="0.6"/>
+  <text x="300" y="355" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">NOVA</text>
+  <text x="300" y="390" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle">58g • 26K DPI</text>
+</svg>
