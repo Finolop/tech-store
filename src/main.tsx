@@ -17,7 +17,7 @@ if (!root) throw new Error('#root element not found');
 
 createRoot(root).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter>
       <ThemeProvider>
         <I18nProvider>
           <AuthProvider>
