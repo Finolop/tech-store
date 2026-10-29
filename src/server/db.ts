@@ -614,14 +614,34 @@ class Store {
         const raw = fs.readFileSync(DB_FILE, 'utf-8');
         const parsed = JSON.parse(raw);
         const products: ProductEntity[] = (parsed.products || initial.products).map((p: ProductEntity) => {
-          if (p.id === 'prod-arc-charge-65' || p.image?.includes('photo-1609592426508-cc02b662363e')) {
-            return {
-              ...p,
-              image: CHARGER_IMAGE_URL,
-              images: [CHARGER_IMAGE_URL],
-            };
+          if (p.id === 'prod-arc-phone-x' || p.image?.includes('1598327105666')) {
+            return { ...p, image: '/images/arc-phone-x.svg', images: ['/images/arc-phone-x.svg'] };
+          }
+          if (p.id === 'prod-nova-s5' || p.image?.includes('1511707171634')) {
+            return { ...p, image: '/images/nova-s5.svg', images: ['/images/nova-s5.svg'] };
+          }
+          if (p.id === 'prod-arc-book-15-pro' || p.image?.includes('1517336714731')) {
+            return { ...p, image: '/images/arc-book-15-pro.svg', images: ['/images/arc-book-15-pro.svg'] };
+          }
+          if (p.id === 'prod-arc-pulse-headset' || p.image?.includes('1505740420928')) {
+            return { ...p, image: '/images/arc-pulse-headset.svg', images: ['/images/arc-pulse-headset.svg'] };
+          }
+          if (p.id === 'prod-nova-strike-mouse' || p.image?.includes('1527864550417')) {
+            return { ...p, image: '/images/nova-strike-mouse.svg', images: ['/images/nova-strike-mouse.svg'] };
+          }
+          if (p.id === 'prod-arc-charge-65' || p.image?.includes('1583863788434') || p.image?.includes('photo-1609592426508-cc02b662363e')) {
+            return { ...p, image: CHARGER_IMAGE_URL, images: [CHARGER_IMAGE_URL] };
+          }
+          if (p.id === 'prod-arc-driver-suite') {
+            return { ...p, image: '/images/arc-driver-suite.svg', images: ['/images/arc-driver-suite.svg'] };
           }
           return p;
+        });
+        const banners: BannerEntity[] = (parsed.banners || initial.banners).map((b: BannerEntity) => {
+          if (b.id === 'banner-1' || b.imageUrl?.includes('unsplash.com')) {
+            return { ...b, imageUrl: '/images/banner-sale.svg' };
+          }
+          return b;
         });
         const users: UserEntity[] = (parsed.users || initial.users).map((u: UserEntity) => ({
           ...u,
@@ -632,6 +652,7 @@ class Store {
           ...initial,
           ...parsed,
           products,
+          banners,
           users,
           promoCodes: parsed.promoCodes?.length ? parsed.promoCodes : initial.promoCodes,
           chatMessages: parsed.chatMessages || [],
